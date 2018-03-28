@@ -46,13 +46,6 @@ static WrapAlertView *_instance;
         tapblackView.delegate = self;
         [self.WR_blackView addGestureRecognizer:tapblackView];
         [self.WR_window addSubview:self.WR_blackView];
-
-        self.WR_backView = [[UIScrollView alloc] initWithFrame:CGRectMake(self.WR_window.frame.size.width/2.0, self.WR_window.frame.size.height/2.0, 0, 0)];
-        self.WR_backView.backgroundColor = [UIColor whiteColor];
-        self.WR_backView.clipsToBounds = YES;
-        self.WR_backView.userInteractionEnabled = YES;
-        self.WR_backView.layer.cornerRadius = 8;
-        [self.WR_window addSubview:self.WR_backView];
                 
         self.canHideByTapBlack = NO;
         self.WR_isVisible = NO;
@@ -152,7 +145,13 @@ static WrapAlertView *_instance;
     if(!self.WR_isVisible)
     {
         self.WR_blackView.alpha = 1;
+        self.WR_backView = [[UIScrollView alloc] initWithFrame:CGRectMake(self.WR_window.frame.size.width/2.0, self.WR_window.frame.size.height/2.0, 0, 0)];
+        self.WR_backView.backgroundColor = [UIColor whiteColor];
+        self.WR_backView.clipsToBounds = YES;
+        self.WR_backView.userInteractionEnabled = YES;
+        self.WR_backView.layer.cornerRadius = 8;
         self.WR_backView.alpha = 1;
+        [self.WR_window addSubview:self.WR_backView];
     }
     else
     {
@@ -182,18 +181,15 @@ static WrapAlertView *_instance;
 
 -(void)hide
 {
+    self.canHideByTapBlack = NO;
     self.WR_isVisible = NO;
     __weak typeof(self) weakSelf = self;
     [UIView animateWithDuration:0.5 animations:^{
         weakSelf.WR_blackView.alpha = 0;
         weakSelf.WR_backView.alpha = 0;
+    } completion:^(BOOL finished) {
+        [weakSelf.WR_backView removeFromSuperview];
     }];
-    
-    for (int i = 0; i < self.WR_backView.subviews.count; i++)
-    {
-        UIView *view = self.WR_backView.subviews[i];
-        [view removeFromSuperview];
-    }
 }
 
 @end

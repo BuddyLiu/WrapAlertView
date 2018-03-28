@@ -123,6 +123,7 @@
                 break;
             case 3:
             {
+                [[WrapAlertView shareAlertView] canHideByTapBlack:YES];
                 [[WrapAlertView shareAlertView] showSheetViewBlock:^(UIScrollView *alertView) {
                     WrapCustomView *view = [[WrapCustomView alloc] initSVI];
                     view.sviTitleLabel.text = @"Alert Verification Image View";
