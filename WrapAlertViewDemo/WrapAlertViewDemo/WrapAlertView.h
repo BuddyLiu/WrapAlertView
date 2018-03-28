@@ -11,6 +11,7 @@
 typedef NS_ENUM(NSUInteger, WrapAlertViewType) {
     WrapAlertViewTypeAlert,
     WrapAlertViewTypeSheet,
+    WrapAlertViewTypeCurtain,
 };
 
 typedef void(^CreateWrapAlertViewBlock)(UIScrollView *alertView);

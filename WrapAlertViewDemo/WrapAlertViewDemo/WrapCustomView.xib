@@ -834,6 +834,65 @@
             </connections>
             <point key="canvasLocation" x="-68" y="378"/>
         </view>
+        <view contentMode="scaleToFill" id="876-NK-Afc" userLabel="Wrap Custom Curtain View" customClass="WrapCustomView">
+            <rect key="frame" x="0.0" y="0.0" width="350" height="112"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="right" translatesAutoresizingMaskIntoConstraints="NO" id="dKd-y5-Bg4">
+                    <rect key="frame" x="8" y="31" width="50" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="qT6-Me-mPk"/>
+                        <constraint firstAttribute="width" constant="50" id="zNl-bj-Psf"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jGz-Ow-0o1">
+                    <rect key="frame" x="66" y="8" width="276" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="PVB-F1-fQO"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Spk-ee-F1p">
+                    <rect key="frame" x="66" y="37" width="268" height="59"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yz7-gy-wqI">
+                            <rect key="frame" x="0.0" y="0.0" width="268" height="18"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="yz7-gy-wqI" firstAttribute="top" secondItem="Spk-ee-F1p" secondAttribute="top" id="7rA-qt-Rsp"/>
+                        <constraint firstItem="yz7-gy-wqI" firstAttribute="width" secondItem="Spk-ee-F1p" secondAttribute="width" id="BRq-vB-BRi"/>
+                        <constraint firstAttribute="trailing" secondItem="yz7-gy-wqI" secondAttribute="trailing" id="O5T-Fx-Iec"/>
+                        <constraint firstAttribute="bottom" secondItem="yz7-gy-wqI" secondAttribute="bottom" id="bM5-nw-pa2"/>
+                        <constraint firstItem="yz7-gy-wqI" firstAttribute="leading" secondItem="Spk-ee-F1p" secondAttribute="leading" id="qeA-vO-iPx"/>
+                    </constraints>
+                </scrollView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="jGz-Ow-0o1" secondAttribute="trailing" constant="8" id="13k-Xg-T83"/>
+                <constraint firstAttribute="trailing" secondItem="Spk-ee-F1p" secondAttribute="trailing" constant="16" id="6pb-as-vS1"/>
+                <constraint firstItem="Spk-ee-F1p" firstAttribute="top" secondItem="jGz-Ow-0o1" secondAttribute="bottom" constant="8" id="FUq-EC-rur"/>
+                <constraint firstItem="dKd-y5-Bg4" firstAttribute="centerY" secondItem="876-NK-Afc" secondAttribute="centerY" id="H9X-Pm-xcm"/>
+                <constraint firstItem="jGz-Ow-0o1" firstAttribute="leading" secondItem="dKd-y5-Bg4" secondAttribute="trailing" constant="8" id="HTP-0M-Go8"/>
+                <constraint firstItem="jGz-Ow-0o1" firstAttribute="top" secondItem="876-NK-Afc" secondAttribute="top" constant="8" id="J6K-jn-btZ"/>
+                <constraint firstItem="Spk-ee-F1p" firstAttribute="leading" secondItem="dKd-y5-Bg4" secondAttribute="trailing" constant="8" id="j6x-gl-exI"/>
+                <constraint firstItem="dKd-y5-Bg4" firstAttribute="leading" secondItem="876-NK-Afc" secondAttribute="leading" constant="8" id="nvs-hs-y1u"/>
+                <constraint firstAttribute="bottom" secondItem="Spk-ee-F1p" secondAttribute="bottom" constant="16" id="rRC-m6-aLT"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="curtainContentLabel" destination="yz7-gy-wqI" id="wF5-Oo-s4f"/>
+                <outlet property="curtainImageView" destination="dKd-y5-Bg4" id="cLG-Ep-fzo"/>
+                <outlet property="curtainTitleLabel" destination="jGz-Ow-0o1" id="XyX-ob-yM8"/>
+            </connections>
+            <point key="canvasLocation" x="351" y="-590"/>
+        </view>
     </objects>
     <resources>
         <image name="right" width="20" height="20"/>

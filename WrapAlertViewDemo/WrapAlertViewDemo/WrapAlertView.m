@@ -109,6 +109,10 @@ static WrapAlertView *_instance;
     {
         top = self.WR_window.frame.size.height - maxHeightFitWindow - 20;
     }
+    else if(self.viewType == WrapAlertViewTypeCurtain)
+    {
+        top = 20;
+    }
     
     dispatch_async(dispatch_get_main_queue(), ^{
         self.WR_backView.frame = ({

@@ -102,6 +102,17 @@
     return self;
 }
 
+- (instancetype)initCurtain
+{
+    self = [super initWithFrame:CGRectZero];
+    if (self)
+    {
+        self = [[NSBundle mainBundle] loadNibNamed:@"WrapCustomView" owner:self options:nil][8];
+        self.viewType = WrapCustomViewTypeCurtain;
+    }
+    return self;
+}
+
 -(void)textFieldDidBeginEditing:(UITextField *)textField
 {
     [UIView animateWithDuration:0.5 animations:^{

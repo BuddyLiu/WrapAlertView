@@ -138,6 +138,24 @@
                 break;
         }
     }
+    else if(indexPath.section == 2)
+    {
+        switch (indexPath.row)
+        {
+            case 0:
+            {
+                [[WrapAlertView shareAlertView] canHideByTapBlack:YES];
+                [[WrapAlertView shareAlertView] showType:(WrapAlertViewTypeCurtain) block:^(UIScrollView *alertView) {
+                    WrapCustomView *view = [[WrapCustomView alloc] initCurtain];
+                    view.curtainImageView.image = [UIImage imageNamed:@"right"];
+                    view.curtainTitleLabel.text = @"通知";
+                    view.curtainContentLabel.text = @"通知内容\n通知内容\n通知内容通知内容通知内容通知内容通知内容通知内容通知内容通知内容通知内容\n通知内容通知内容通知内容通知内容通知内容通知内容通知内容通知内容\n9379237492734927349";
+                    [alertView addSubview:view];
+                }];
+            }
+                break;
+        }
+    }
 }
 
 -(void)codeBtnAction:(UIButton *)sender

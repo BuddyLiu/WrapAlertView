@@ -11,6 +11,7 @@
 typedef NS_ENUM(NSUInteger, WrapCustomViewType) {
     WrapCustomViewTypeAlert,
     WrapCustomViewTypeSheet,
+    WrapCustomViewTypeCurtain,
 };
 
 @interface WrapCustomView : UIView
@@ -62,6 +63,10 @@ typedef NS_ENUM(NSUInteger, WrapCustomViewType) {
 @property (strong, nonatomic) IBOutlet UIScrollView *csMainScrollView;
 @property (strong, nonatomic) IBOutlet UIButton *csSureBtn;
 @property (strong, nonatomic) IBOutlet UIButton *csCancelBtn;
+
+@property (strong, nonatomic) IBOutlet UIImageView *curtainImageView;
+@property (strong, nonatomic) IBOutlet UILabel *curtainTitleLabel;
+@property (strong, nonatomic) IBOutlet UILabel *curtainContentLabel;
 
 /**
  初始化简单视图，仅包含titleLabel，mainScrollView，contentLabel，cancelBtn，sureBtn
@@ -118,5 +123,12 @@ typedef NS_ENUM(NSUInteger, WrapCustomViewType) {
  @return 返回视图本身 Sheet
  */
 - (instancetype)initSVI;
+
+/**
+ 初始化通知栏样式视图，仅包含curtainImageView，curtainTitleLabel，curtainContentLabel
+
+ @return 返回视图本身 Curtain
+ */
+- (instancetype)initCurtain;
 
 @end
