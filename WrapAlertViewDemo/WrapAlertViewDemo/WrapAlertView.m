@@ -93,7 +93,7 @@ static WrapAlertView *_instance;
     CGFloat top = 0;
     if(self.viewType == WrapAlertViewTypeAlert)
     {
-        top = (self.WR_window.frame.size.height - lastBottom)/4.0;
+        top = (self.WR_window.frame.size.height - lastBottom)/2.0;
     }
     else if(self.viewType == WrapAlertViewTypeSheet)
     {

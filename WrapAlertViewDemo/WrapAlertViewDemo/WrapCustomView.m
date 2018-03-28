@@ -20,6 +20,7 @@
     if (self)
     {
         self = [[NSBundle mainBundle] loadNibNamed:@"WrapCustomView" owner:self options:nil][0];
+        self.viewType = WrapCustomViewTypeAlert;
     }
     return self;
 }
@@ -30,6 +31,7 @@
     if (self)
     {
         self = [[NSBundle mainBundle] loadNibNamed:@"WrapCustomView" owner:self options:nil][1];
+        self.viewType = WrapCustomViewTypeAlert;
     }
     return self;
 }
@@ -40,6 +42,7 @@
     if (self)
     {
         self = [[NSBundle mainBundle] loadNibNamed:@"WrapCustomView" owner:self options:nil][2];
+        self.viewType = WrapCustomViewTypeAlert;
     }
     return self;
 }
@@ -50,6 +53,7 @@
     if (self)
     {
         self = [[NSBundle mainBundle] loadNibNamed:@"WrapCustomView" owner:self options:nil][3];
+        self.viewType = WrapCustomViewTypeAlert;
     }
     return self;
 }
@@ -60,6 +64,7 @@
     if (self)
     {
         self = [[NSBundle mainBundle] loadNibNamed:@"WrapCustomView" owner:self options:nil][4];
+        self.viewType = WrapCustomViewTypeSheet;
     }
     return self;
 }
@@ -70,6 +75,7 @@
     if (self)
     {
         self = [[NSBundle mainBundle] loadNibNamed:@"WrapCustomView" owner:self options:nil][5];
+        self.viewType = WrapCustomViewTypeSheet;
     }
     return self;
 }
@@ -80,6 +86,7 @@
     if (self)
     {
         self = [[NSBundle mainBundle] loadNibNamed:@"WrapCustomView" owner:self options:nil][6];
+        self.viewType = WrapCustomViewTypeSheet;
     }
     return self;
 }
@@ -90,6 +97,7 @@
     if (self)
     {
         self = [[NSBundle mainBundle] loadNibNamed:@"WrapCustomView" owner:self options:nil][7];
+        self.viewType = WrapCustomViewTypeSheet;
     }
     return self;
 }
@@ -107,10 +115,19 @@
 
 -(void)textFieldDidEndEditing:(UITextField *)textField
 {
+    CGFloat top = 0;
+    if(self.viewType == WrapCustomViewTypeAlert)
+    {
+        top = ([UIScreen mainScreen].bounds.size.height - self.frame.size.height)/2.0;
+    }
+    else
+    {
+        top = [UIScreen mainScreen].bounds.size.height - self.frame.size.height - 20;
+    }
     [UIView animateWithDuration:0.5 animations:^{
         self.superview.frame = ({
             CGRect frame = self.superview.frame;
-            frame.origin.y = [UIScreen mainScreen].bounds.size.height - self.frame.size.height;
+            frame.origin.y = top;
             frame;
         });
     }];

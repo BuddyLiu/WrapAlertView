@@ -8,7 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
+typedef NS_ENUM(NSUInteger, WrapCustomViewType) {
+    WrapCustomViewTypeAlert,
+    WrapCustomViewTypeSheet,
+};
+
 @interface WrapCustomView : UIView
+
+@property (nonatomic, assign) WrapCustomViewType viewType;
 
 @property (strong, nonatomic) IBOutlet UILabel *titleLabel;
 @property (strong, nonatomic) IBOutlet UIScrollView *mainScrollView;
