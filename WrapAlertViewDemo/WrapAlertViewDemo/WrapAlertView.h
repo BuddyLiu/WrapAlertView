@@ -13,13 +13,13 @@ typedef NS_ENUM(NSUInteger, WrapAlertViewType) {
     WrapAlertViewTypeSheet,
 };
 
-typedef void(^CreateWrapAlertViewBlock)(UIView *alertView);
+typedef void(^CreateWrapAlertViewBlock)(UIScrollView *alertView);
 
 @interface WrapAlertView : UIView<UIGestureRecognizerDelegate>
 
 @property (nonatomic, strong) UIWindow *WR_window; //windows层
 @property (nonatomic, strong) UIView *WR_blackView; //底层透明黑色视图层
-@property (nonatomic, strong) UIView *WR_backView; //可操作视图
+@property (nonatomic, strong) UIScrollView *WR_backView; //可操作视图
 @property (nonatomic, assign) BOOL WR_isVisible; //是否已经显示
 
 +(WrapAlertView *)shareAlertView;

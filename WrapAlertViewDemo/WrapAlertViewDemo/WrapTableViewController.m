@@ -33,7 +33,7 @@
         {
             case 0:
             {
-                [[WrapAlertView shareAlertView] showAlertViewBlock:^(UIView *alertView) {
+                [[WrapAlertView shareAlertView] showAlertViewBlock:^(UIScrollView *alertView) {
                     WrapCustomView *view = [[WrapCustomView alloc] initSimple];
                     view.titleLabel.text = @"UIAlertControllerStyleAlert";
                     view.contentLabel.text = @"asdasdadasdasdjkahdkahlksjhldakjshdlkjhks\n123djfhaksjdhfkahdkf\nhsddasdadasdasdjk456ahsdadasdasdjkahdkahlksjhldakjshdlkjhks\n123djfhaksjdhfkahdkf\nhsddasdadasdasdjk456ahsdadasdasdjkahdkahlksjhldakjshdlkjhks\n123djfhaksjdhfkahdkf\nhsddasdadasdasdjk456ahsdadasdasdjkahdkahlksjhldakjshdlkjhks\n123djfhaksjdhfkahdkf\nhsddasdadasdasdjk456ahsdadasdasdjkahdkahlksjhldakjshdlkjhks\n123djfhaksjdhfkahdkf\nhsddasdadasdasdjk456ahsdadasdasdjkahdkahlksjhldakjshdlkjhks\n123djfhaksjdhfkahdkf\nhsddasdadasdasdjk456ah\ndkahlksjhldakjshdlkjhksdjfhaksjd\nhfkahdkfhsddasdadasdasdjka\nhdkahlksjhldakjshdlkjhksdjfhaksjdhfkahdkfhsddasdadasdasdjkahdkahlksjhldakjshdlkjhksdjfhaksjdhfkahdkfhsddasdadasdasdjkahdkahlksjhldakjshdlkjhksdjfhaksjdhfkahdkfhsd000";
@@ -45,7 +45,7 @@
                 break;
             case 1:
             {
-                [[WrapAlertView shareAlertView] showAlertViewBlock:^(UIView *alertView) {
+                [[WrapAlertView shareAlertView] showAlertViewBlock:^(UIScrollView *alertView) {
                     WrapCustomView *view = [[WrapCustomView alloc] initC];
                     view.cContentLabel.text = @"asdasdadasdasdjkahdkahlksjhldakjshdlkjhks\n123djfhaksjdhfkahdkf\nhsddasdadasdasdjk456ahsdadasdasdjkahdkahlksjhldakjshdlkjhks\n123djfhaksjdhfkahdkf\nhsddasdadasdasdjk456ahsdadasdasdjkahdkahlksjhldakjshdlkjhks\n123djfhaksjdhfkahdkf\nhsddasdadasdasdjk456ahsdadasdasdjkahdkahlksjhldakjshdlkjhks\n123djfhaksjdhfkahdkf\nhsddasdadasdasdjk456ahsdadasdasdjkahdkahlksjhldakjshdlkjhks\n123djfhaksjdhfkahdkf\nhsddasdadasdasdjk456ahsdadasdasdjkahdkahlksjhldakjshdlkjhks\n123djfhaksjdhfkahdkf\nhsddasdadasdasdjk456ah\ndkahlksjhldakjshdlkjhksdjfhaksjd\nhfkahdkfhsddasdadasdasdjka\nhdkahlksjhldakjshdlkjhksdjfhaksjdhfkahdkfhsddasdadasdasdjkahdkahlksjhldakjshdlkjhksdjfhaksjdhfkahdkfhsddasdadasdasdjkahdkahlksjhldakjshdlkjhksdjfhaksjdhfkahdkfhsd000";
                     [view.cCancelBtn addTarget:self action:@selector(cancelBtnAction:) forControlEvents:(UIControlEventTouchUpInside)];
@@ -56,7 +56,7 @@
                 break;
             case 2:
             {
-                [[WrapAlertView shareAlertView] showAlertViewBlock:^(UIView *alertView) {
+                [[WrapAlertView shareAlertView] showAlertViewBlock:^(UIScrollView *alertView) {
                     WrapCustomView *view = [[WrapCustomView alloc] initVC];
                     view.vcTitleLabel.text = @"Alert Verification code View";
                     [view.vcCodeBtn addTarget:self action:@selector(codeBtnAction:) forControlEvents:(UIControlEventTouchUpInside)];
@@ -68,7 +68,7 @@
                 break;
             case 3:
             {
-                [[WrapAlertView shareAlertView] showAlertViewBlock:^(UIView *alertView) {
+                [[WrapAlertView shareAlertView] showAlertViewBlock:^(UIScrollView *alertView) {
                     WrapCustomView *view = [[WrapCustomView alloc] initVI];
                     view.viTitleLabel.text = @"Alert Verification Image View";
                     [view.viCodeImageView setImage:[UIImage imageNamed:@"right"]];
@@ -88,7 +88,7 @@
         {
             case 0:
             {
-                [[WrapAlertView shareAlertView] showSheetViewBlock:^(UIView *alertView) {
+                [[WrapAlertView shareAlertView] showSheetViewBlock:^(UIScrollView *alertView) {
                     WrapCustomView *view = [[WrapCustomView alloc] initSSimple];
                     view.sTitleLabel.text = @"UIAlertControllerStyleActionSheet";
                     view.sContentLabel.text = @"asdasdadasdasdjkahdkahlksjhldakjshdlkjhks\n123djfhaksjdhfkahdkf\nhsddasdadasdasdjk456ahsdadasdasdjkahdkahlksjhldakjshdlkjhks\n123djfhaksjdhfkahdkf\nhsddasdadasdasdjk456ahsdadasdasdjkahdkahlksjhldakjshdlkjhks\n123djfhaksjdhfkahdkf\nhsddasdadasdasdjk456ahsdadasdasdjkahdkahlksjhldakjshdlkjhks\n123djfhaksjdhfkahdkf\nhsddasdadasdasdjk456ahsdadasdasdjkahdkahlksjhldakjshdlkjhks\n123djfhaksjdhfkahdkf\nhsddasdadasdasdjk456ahsdadasdasdjkahdkahlksjhldakjshdlkjhks\n123djfhaksjdhfkahdkf\nhsddasdadasdasdjk456ah\ndkahlksjhldakjshdlkjhksdjfhaksjd\nhfkahdkfhsddasdadasdasdjka\nhdkahlksjhldakjshdlkjhksdjfhaksjdhfkahdkfhsddasdadasdasdjkahdkahlksjhldakjshdlkjhksdjfhaksjdhfkahdkfhsddasdadasdasdjkahdkahlksjhldakjshdlkjhksdjfhaksjdhfkahdkfhsd000";
@@ -100,7 +100,7 @@
                 break;
             case 1:
             {
-                [[WrapAlertView shareAlertView] showSheetViewBlock:^(UIView *alertView) {
+                [[WrapAlertView shareAlertView] showSheetViewBlock:^(UIScrollView *alertView) {
                     WrapCustomView *view = [[WrapCustomView alloc] initCS];
                     view.csContentLabel.text = @"asdasdadasdasdjkahdkahlksjhldakjshdlkjhks\n123djfhaksjdhfkahdkf\nhsddasdadasdasdjk456ahsdadasdasdjkahdkahlksjhldakjshdlkjhks\n123djfhaksjdhfkahdkf\nhsddasdadasdasdjk456ahsdadasdasdjkahdkahlksjhldakjshdlkjhks\n123djfhaksjdhfkahdkf\nhsddasdadasdasdjk456ahsdadasdasdjkahdkahlksjhldakjshdlkjhks\n123djfhaksjdhfkahdkf\nhsddasdadasdasdjk456ahsdadasdasdjkahdkahlksjhldakjshdlkjhks\n123djfhaksjdhfkahdkf\nhsddasdadasdasdjk456ahsdadasdasdjkahdkahlksjhldakjshdlkjhks\n123djfhaksjdhfkahdkf\nhsddasdadasdasdjk456ah\ndkahlksjhldakjshdlkjhksdjfhaksjd\nhfkahdkfhsddasdadasdasdjka\nhdkahlksjhldakjshdlkjhksdjfhaksjdhfkahdkfhsddasdadasdasdjkahdkahlksjhldakjshdlkjhksdjfhaksjdhfkahdkfhsddasdadasdasdjkahdkahlksjhldakjshdlkjhksdjfhaksjdhfkahdkfhsd000";
                     [view.csCancelBtn addTarget:self action:@selector(cancelBtnAction:) forControlEvents:(UIControlEventTouchUpInside)];
@@ -111,7 +111,7 @@
                 break;
             case 2:
             {
-                [[WrapAlertView shareAlertView] showSheetViewBlock:^(UIView *alertView) {
+                [[WrapAlertView shareAlertView] showSheetViewBlock:^(UIScrollView *alertView) {
                     WrapCustomView *view = [[WrapCustomView alloc] initSVC];
                     view.svcTitleLabel.text = @"Alert Verification code View";
                     [view.svcCodeBtn addTarget:self action:@selector(codeBtnAction:) forControlEvents:(UIControlEventTouchUpInside)];
@@ -123,7 +123,7 @@
                 break;
             case 3:
             {
-                [[WrapAlertView shareAlertView] showSheetViewBlock:^(UIView *alertView) {
+                [[WrapAlertView shareAlertView] showSheetViewBlock:^(UIScrollView *alertView) {
                     WrapCustomView *view = [[WrapCustomView alloc] initSVI];
                     view.sviTitleLabel.text = @"Alert Verification Image View";
                     [view.sviCodeImageView setImage:[UIImage imageNamed:@"right"]];

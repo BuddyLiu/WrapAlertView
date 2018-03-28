@@ -107,7 +107,7 @@
     [UIView animateWithDuration:0.5 animations:^{
         self.superview.frame = ({
             CGRect frame = self.superview.frame;
-            frame.origin.y = ([UIScreen mainScreen].bounds.size.height - self.frame.size.height)/4.0;
+            frame.origin.y = ([UIScreen mainScreen].bounds.size.height - self.superview.frame.size.height)/4.0;
             frame;
         });
     }];
@@ -118,11 +118,11 @@
     CGFloat top = 0;
     if(self.viewType == WrapCustomViewTypeAlert)
     {
-        top = ([UIScreen mainScreen].bounds.size.height - self.frame.size.height)/2.0;
+        top = ([UIScreen mainScreen].bounds.size.height - self.superview.frame.size.height)/2.0;
     }
     else
     {
-        top = [UIScreen mainScreen].bounds.size.height - self.frame.size.height - 20;
+        top = [UIScreen mainScreen].bounds.size.height - self.superview.frame.size.height - 20;
     }
     [UIView animateWithDuration:0.5 animations:^{
         self.superview.frame = ({

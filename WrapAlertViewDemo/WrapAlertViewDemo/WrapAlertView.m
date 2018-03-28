@@ -47,7 +47,7 @@ static WrapAlertView *_instance;
         [self.WR_blackView addGestureRecognizer:tapblackView];
         [self.WR_window addSubview:self.WR_blackView];
 
-        self.WR_backView = [[UIView alloc] initWithFrame:CGRectMake(self.WR_window.frame.size.width/2.0, self.WR_window.frame.size.height/2.0, 0, 0)];
+        self.WR_backView = [[UIScrollView alloc] initWithFrame:CGRectMake(self.WR_window.frame.size.width/2.0, self.WR_window.frame.size.height/2.0, 0, 0)];
         self.WR_backView.backgroundColor = [UIColor whiteColor];
         self.WR_backView.clipsToBounds = YES;
         self.WR_backView.userInteractionEnabled = YES;
@@ -63,21 +63,21 @@ static WrapAlertView *_instance;
 -(void)layoutAlertSubviews
 {
     NSArray *viewArr = self.WR_backView.subviews;
-    CGFloat lastBottom = 0;
-    CGFloat lastWidth = 0;
+    CGFloat maxHeight = 0;
+    CGFloat maxWidth = 0;
     for (UIView *view in viewArr)
     {
-        if((view.frame.size.height + view.frame.origin.y) > lastBottom)
+        if((view.frame.size.height + view.frame.origin.y) > maxHeight)
         {
-            lastBottom = (view.frame.size.height + view.frame.origin.y);
+            maxHeight = (view.frame.size.height + view.frame.origin.y);
         }
         else
         {
             continue;
         }
-        if(view.frame.size.width > lastWidth)
+        if(view.frame.size.width > maxWidth)
         {
-            lastWidth = view.frame.size.width;
+            maxWidth = view.frame.size.width;
         }
         else
         {
@@ -85,27 +85,45 @@ static WrapAlertView *_instance;
         }
     }
     
-    if(lastBottom > (self.WR_window.frame.size.height - 20))
+    CGFloat maxHeightFitWindow = 0;
+    if(maxHeight > (self.WR_window.frame.size.height - 40))
     {
-        lastBottom = self.WR_window.frame.size.height - 20;
+        maxHeightFitWindow = self.WR_window.frame.size.height - 40;
+    }
+    else
+    {
+        maxHeightFitWindow = maxHeight;
     }
     
+    CGFloat maxWidthFitWindow = 0;
+    if(maxWidth > (self.WR_window.frame.size.width - 20))
+    {
+        maxWidthFitWindow = self.WR_window.frame.size.width - 20;
+    }
+    else
+    {
+        maxWidthFitWindow = maxWidth;
+    }
+    
+    self.WR_backView.contentSize = CGSizeMake(maxWidth, maxHeight);
+
     CGFloat top = 0;
     if(self.viewType == WrapAlertViewTypeAlert)
     {
-        top = (self.WR_window.frame.size.height - lastBottom)/2.0;
+        top = (self.WR_window.frame.size.height - maxHeightFitWindow)/2.0;
     }
     else if(self.viewType == WrapAlertViewTypeSheet)
     {
-        top = self.WR_window.frame.size.height - lastBottom - 20;
+        top = self.WR_window.frame.size.height - maxHeightFitWindow - 20;
     }
+    
     dispatch_async(dispatch_get_main_queue(), ^{
         self.WR_backView.frame = ({
             CGRect frame = self.WR_backView.frame;
-            frame.origin.x = (self.WR_window.frame.size.width - lastWidth)/2.0;
+            frame.origin.x = (self.WR_window.frame.size.width - maxWidthFitWindow)/2.0;
             frame.origin.y = top;
-            frame.size.width = lastWidth;
-            frame.size.height = lastBottom;
+            frame.size.width = maxWidthFitWindow;
+            frame.size.height = maxHeightFitWindow;
             frame;
         });
     });

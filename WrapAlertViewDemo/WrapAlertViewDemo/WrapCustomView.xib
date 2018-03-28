@@ -727,11 +727,11 @@
             <point key="canvasLocation" x="-68" y="76"/>
         </view>
         <view contentMode="scaleToFill" id="7k8-15-LXl" userLabel="Wrap Custom Sheet Verification Image View" customClass="WrapCustomView">
-            <rect key="frame" x="0.0" y="0.0" width="310" height="241"/>
+            <rect key="frame" x="0.0" y="0.0" width="310" height="280"/>
             <autoresizingMask key="autoresizingMask"/>
             <subviews>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="z7f-Bo-cG4">
-                    <rect key="frame" x="0.0" y="161" width="310" height="80"/>
+                    <rect key="frame" x="0.0" y="200" width="310" height="80"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YLb-Hc-7gU">
                             <rect key="frame" x="0.0" y="0.0" width="310" height="38"/>
@@ -769,23 +769,23 @@
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KrU-xF-6V7">
-                    <rect key="frame" x="0.0" y="160" width="310" height="1"/>
+                    <rect key="frame" x="0.0" y="199" width="310" height="1"/>
                     <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="1" id="OhH-ok-JLb"/>
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7I7-DE-1hb">
-                    <rect key="frame" x="0.0" y="51" width="310" height="109"/>
+                    <rect key="frame" x="0.0" y="51" width="310" height="148"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="7oZ-12-x4O">
-                            <rect key="frame" x="8" y="16" width="294" height="77"/>
+                            <rect key="frame" x="8" y="16" width="294" height="116"/>
                             <subviews>
                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="right" translatesAutoresizingMaskIntoConstraints="NO" id="sDi-gS-AwB">
-                                    <rect key="frame" x="0.0" y="0.0" width="294" height="36"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="294" height="55.5"/>
                                 </imageView>
                                 <textField opaque="NO" tag="202" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入验证码" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CpH-rJ-IgB">
-                                    <rect key="frame" x="0.0" y="41" width="294" height="36"/>
+                                    <rect key="frame" x="0.0" y="60.5" width="294" height="55.5"/>
                                     <nil key="textColor"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <textInputTraits key="textInputTraits"/>
@@ -832,7 +832,7 @@
                 <outlet property="sviSureBtn" destination="YLb-Hc-7gU" id="3kb-wx-8Xn"/>
                 <outlet property="sviTitleLabel" destination="fHl-8n-gby" id="i9h-6l-e3E"/>
             </connections>
-            <point key="canvasLocation" x="-68" y="359"/>
+            <point key="canvasLocation" x="-68" y="378"/>
         </view>
     </objects>
     <resources>
