@@ -53,7 +53,7 @@ static WrapAlertView *_instance;
         self.WR_backView.userInteractionEnabled = YES;
         self.WR_backView.layer.cornerRadius = 8;
         [self.WR_window addSubview:self.WR_backView];
-        
+                
         self.canHideByTapBlack = NO;
         self.WR_isVisible = NO;
     }
@@ -170,6 +170,12 @@ static WrapAlertView *_instance;
         weakSelf.WR_blackView.alpha = 0;
         weakSelf.WR_backView.alpha = 0;
     }];
+    
+    for (int i = 0; i < self.WR_backView.subviews.count; i++)
+    {
+        UIView *view = self.WR_backView.subviews[i];
+        [view removeFromSuperview];
+    }
 }
 
 @end
